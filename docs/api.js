@@ -4,7 +4,7 @@ const getChiste = async () => {
     //const image = document.createElement('img');
 
     categoria = document.querySelector('#categorias'); //coge id=categorias
-    valor = categoria.value;
+    valor = categoria.value;//cogemos animal
     link = urlprueba + valor;
 	let request = await fetch(link);
 	if (request.status === 200) {
