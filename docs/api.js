@@ -1,11 +1,11 @@
-url = "https://api.chucknorris.io/jokes/random?category=";
+urlprueba = "https://api.chucknorris.io/jokes/random?category=";
 
 const getChiste = async () => {
     //const image = document.createElement('img');
 
     categoria = document.querySelector('#categorias'); //coge id=categorias
     valor = categoria.value;
-    link = url + valor;
+    link = urlprueba + valor;
 	let request = await fetch(link);
 	if (request.status === 200) {
 		let data = await request.json();
@@ -15,8 +15,11 @@ const getChiste = async () => {
 	}
 };
 
+
+
 const getCredenciales = async () => {
-	url=https://api.energomonitor.com/v1/users/usoxx
+	url="https://api.energomonitor.com/v1/users/usoxx";
+	
 	let request = await fetch(link);
 	if (request.status === 200) {
 		let data = await request.json();
@@ -28,3 +31,4 @@ const getCredenciales = async () => {
 
 
 getChiste();
+getCredenciales();
