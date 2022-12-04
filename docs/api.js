@@ -18,7 +18,7 @@ const getChiste = async () => {
 
 
 const getCredenciales = async () => {
-	link="https://api.energomonitor.com/v1/users/usoxx";
+	link="https://api.energomonitor.com/v1/users/usoxx?token=qHKdM7pq09pzn4j5puflfXGaP42HH4";
 	
 	let request = await fetch(link);
 	if (request.status === 200) {
