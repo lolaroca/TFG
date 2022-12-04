@@ -18,13 +18,13 @@ const getChiste = async () => {
 
 
 const getCredenciales = async () => {
-	link="https://api.energomonitor.com/v1/";
+	link="https://api.energomonitor.com/v1/users/usoxx";
 	
 	let request = await fetch(link);
 	if (request.status === 200) {
 		let data = await request.json();
 		console.log(data);
-	    document.getElementById("email").innerHTML = data.version; //insertamos el email en 
+	    document.getElementById("email").innerHTML = data.email; //insertamos el email en 
 	}
 }
 
