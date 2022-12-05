@@ -18,10 +18,12 @@ const getChiste = async () => {
 
 
 const getCredenciales = async () => {
-	link="https://api.energomonitor.com/v1/users/usoxx?token=qHKdM7pq09pzn4j5puflfXGaP42HH4";
-	
+	url="https://api.energomonitor.com/v1/users/usoxx";
+	token="?token=qHKdM7pq09pzn4j5puflfXGaP42HH4";
+	link=url+token;
 	let request = await fetch(link);
 	if (request.status === 200) {
+		
 		let data = await request.json();
 		console.log(data);
 	    document.getElementById("email").innerHTML = data.email; //insertamos el email en 
