@@ -19,7 +19,12 @@ const getChiste = async () => {
 
 const getCredenciales = async () => {
 	url="https://api.energomonitor.com/v1/";
-	let request = await fetch(url);
+	let request = await fetch(url, {
+		method: 'get',
+		headers: new Headers({
+			'Authorization': 'qHKdM7pq09pzn4j5puflfXGaP42HH4'
+		})
+	});
 	if (request.status === 200) {
 		let data = await request.json();
 		console.log(data);
@@ -27,7 +32,14 @@ const getCredenciales = async () => {
 	}
 }
 
-
+/*fetch('URL_GOES_HERE', { 
+	method: 'post', 
+	headers: new Headers({
+	  'Authorization': 'Basic '+btoa('username:password'), 
+	  'Content-Type': 'application/x-www-form-urlencoded'
+	}), 
+	body: 'A=1&B=2'
+  });*/
 
 getChiste();
 getCredenciales();
