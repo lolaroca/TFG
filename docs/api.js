@@ -18,7 +18,7 @@ const getChiste = async () => {
 
 
 const getCredenciales = async () => {
-	url="https://api.energomonitor.com/v1/";
+	url="https://api.energomonitor.com/v1/users/usoxx";
 	let request = await fetch(url, {
 		method: 'get',
 		headers: new Headers({
@@ -28,7 +28,7 @@ const getCredenciales = async () => {
 	if (request.status === 200) {
 		let data = await request.json();
 		console.log(data);
-	    document.getElementById("email").innerHTML = data.documentation_url; //insertamos el email en 
+	    document.getElementById("email").innerHTML = data.email; //insertamos el email en 
 	}
 }
 
