@@ -18,11 +18,11 @@ const getChiste = async () => {
 
 
 const getCredenciales = async () => {
-	url="https://api.energomonitor.com/v1/users/usoxx";
-	let request = await fetch(url, {
-		method: 'get',
+	link="https://api.energomonitor.com/v1/users/usoxx";
+	let request = await fetch(link, {
+		method: 'GET',
 		headers: new Headers({
-			'Authorization': 'qHKdM7pq09pzn4j5puflfXGaP42HH4'
+			'Authorization': 'Basic'+ 'qHKdM7pq09pzn4j5puflfXGaP42HH4'
 		})
 	});
 	if (request.status === 200) {
