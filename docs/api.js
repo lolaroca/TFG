@@ -20,8 +20,8 @@ const getChiste = async () => {
 const getCredenciales = async () => {
 	url="https://api.energomonitor.com/v1/";
 	//url="https://api.energomonitor.com/v1/users/usoxx";
-	token="?token=qHKdM7pq09pzn4j5puflfXGaP42HH4";
-	link=url+token;
+	//token="?token=qHKdM7pq09pzn4j5puflfXGaP42HH4";
+	//link=url+token;
 	let request = await fetch(url);
 	if (request.status === 200) {
 		
