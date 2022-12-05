@@ -25,6 +25,7 @@ const getCredenciales = async () => {
 			'Authorization': 'Basic'+ 'qHKdM7pq09pzn4j5puflfXGaP42HH4'
 		})
 	});
+	console.log(request);
 	if (request.status === 200) {
 		let data = await request.json();
 		console.log(data);
