@@ -17,35 +17,10 @@ const getChiste = async () => {
 
 
 
-/*const getCredenciales = async () => {
-	$.ajax({
-        url : 'https://api.energomonitor.com/v1/users/usoxx',
-        data : {},
-        dataType : 'jsonp',
-        success : function(json) {
-           debugger;
-        },
-        beforeSend: function(xhr, settings) { 
-            xhr.setRequestHeader('Authorization','qHKdM7pq09pzn4j5puflfXGaP42HH4' );
-        },
-        error : function(xhr, status) {
-            alert('Disculpe, existió un problema');
-        },
-        complete : function(xhr, status) {
-            alert('Petición realizada');
-        }
-    });
-	let request = await fetch(link);
-	console.log(request);
-	if (request.status === 200) {
-		let data = await request.json();
-		console.log(data);
-	    document.getElementById("email").innerHTML = data.email; //insertamos el email en 
-	}
-}*/
+
 const getCredenciales = async () => {
-	link="https://api.energomonitor.com/v1/users/usoxx";
-	let request = await fetch(link, {
+	url="https://api.energomonitor.com/v1/users/usoxx";
+	let request = await fetch(url, {
 		method: 'GET',
 		headers: new Headers({
 			'Authorization': 'Bearer'+ 'qHKdM7pq09pzn4j5puflfXGaP42HH4'
