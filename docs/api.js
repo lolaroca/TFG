@@ -30,6 +30,7 @@ const getCredenciales = async () => {
 	if (request.status === 200) {
 		let data = await request.json();
 		console.log(data);
+		console.log(data.email)
 	    document.getElementById("email").innerHTML = data.email; //insertamos el email en 
 	}
 }
