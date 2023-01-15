@@ -15,7 +15,7 @@
 
     
 </head>
-<body style="background-color: #A4E3EA  ;">
+<body style="background-color: #eeeeee  ;">
 
 
 
@@ -26,22 +26,23 @@
             <div class="col-lg-6 col-md-8 mx-auto">
                 
                 <br>
-                    <select class="form-select" aria-label="Default select example" id="categorias">
-                        <option value="animal">Animal</option>
-                        <option value="fashion">F</option>
-
-                    </select>
-                    <button class="btn btn-primary my-2" onclick="getChiste()"> Other </button>
-                    <h5 id="chiste"></h5>
+                <select class="form-select" aria-label="Default select example" id="sensores">
+                    <option selected>Escoga el sensor a utilizar</option>
+                    <option value="emjeor">Sensor 1, c1</option>
+                    <option value="emjeos">Sensor 1, c2</option>
+                    <option value="emjeot">Sensor 1, c3</option>
+                    <option value="emjfex">Sensor 2, c1</option>
+                  </select>
+                    
+                  <button class="btn btn-primary my-2" onclick="getCredenciales()"> Obtener Información </button>
+                    <h5 id="tiempo"></h5>
+                    <h5 id="dato"></h5>
                 </p>
             </div>
         </div>
     </section>
 
-   <!-- <button class="btn btn-primary my-2" onclick="getCredenciales()"> obtener información </button>-->
-    <h3 id="email"></h3>
 
-<hr>
 </main>
 
 

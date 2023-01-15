@@ -1,6 +1,6 @@
-urlprueba = "https://api.chucknorris.io/jokes/random?category=";
+//urlprueba = "https://api.chucknorris.io/jokes/random?category=";
 
-const getChiste = async () => {
+/*const getChiste = async () => {
     //const image = document.createElement('img');
 
     categoria = document.querySelector('#categorias'); //coge id=categorias
@@ -13,30 +13,42 @@ const getChiste = async () => {
 	    document.getElementById("chiste").innerHTML = data.value; //instertamos el data en chiste
 		document.getElementById("foto").innerHTML = data.icon_url;
 	}
-};
+};*/
 
 
 
-
+let i=0;
 const getCredenciales = async () => {
-	url="https://api.energomonitor.com/v1/users/usoxx";
-	let request = await fetch(url, {
+	datoDoc=document.querySelector('#sensores');
+	dato=datoDoc.value;
+	//dato="emjeor";
+	link="https://api.energomonitor.com/v1/feeds/emjeic/streams/"+dato+"/data?limit=10";
+	console.log(link);
+
+	let request = await fetch(link, {
 		method: 'GET',
 		headers: new Headers({
-			'Authorization': 'Bearer'+ 'qHKdM7pq09pzn4j5puflfXGaP42HH4'
+			'Authorization': 'Bearer '+ '8Hbf70l1NF0L9wA1whSFzRZq1V3wxR'
 		})
 	});
-	console.log(request);
 	if (request.status === 200) {
 		let data = await request.json();
-		console.log(data);
-		console.log(data.email)
-	    document.getElementById("email").innerHTML = data.email; //insertamos el email en 
+		var timestamp = data[i][0];
+		var date = new Date(timestamp*1000);
+		var fecha ="Fecha: "+date.getDate()+ "/"+(date.getMonth()+1)+"/"+date.getFullYear()+" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+		var dato = "Dato[Wh]: "+ data[i][1];
+		document.getElementById("tiempo").innerHTML = fecha; 
+	    document.getElementById("dato").innerHTML = dato;
+		
+	}
+	i=i+1;
+	if(i==10){
+		i=0;
 	}
 }
 
 
 
 
-getChiste();
+//getChiste();
 getCredenciales();
